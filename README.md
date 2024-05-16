@@ -1,4 +1,4 @@
-# tuat_tea_house
+# RAG App
 
 ## 概要
 
@@ -16,7 +16,7 @@
 リポジトリをクローンし，必要な依存関係をインストールしてプロジェクトを実行します:
 
 ```bash
-git clone https://github.com/hokkey621/tuat_tea_house.git
+git clone git@github.com:hokkey621/ragapp.git
 cd src/rag
 rye run python app.py
 ```
