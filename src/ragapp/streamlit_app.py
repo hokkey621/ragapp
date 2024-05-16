@@ -8,7 +8,7 @@ import config
 
 # 設定
 genai.configure(api_key=config.GEMINI_API_KEY)
-model = genai.GenerativeModel(model_name='gemini-pro')
+model = genai.GenerativeModel(model_name='gemini-1.5-flash-latest')
 
 def load_sentences():
     with open(config.DB_PATH, 'r', encoding='utf-8') as file:
