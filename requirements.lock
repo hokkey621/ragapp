@@ -35,6 +35,7 @@ google-ai-generativelanguage==0.6.3
 google-api-core==2.19.0
     # via google-ai-generativelanguage
     # via google-api-python-client
+    # via google-cloud-vision
     # via google-generativeai
 google-api-python-client==2.129.0
     # via google-generativeai
@@ -43,9 +44,14 @@ google-auth==2.29.0
     # via google-api-core
     # via google-api-python-client
     # via google-auth-httplib2
+    # via google-cloud-vision
     # via google-generativeai
 google-auth-httplib2==0.2.0
     # via google-api-python-client
+google-cloud==0.34.0
+    # via ragapp
+google-cloud-vision==3.7.2
+    # via ragapp
 google-generativeai==0.5.3
     # via ragapp
 googleapis-common-protos==1.63.0
@@ -78,26 +84,38 @@ mdurl==0.1.2
     # via markdown-it-py
 numpy==1.26.4
     # via altair
+    # via opencv-python
     # via pandas
     # via pyarrow
     # via pydeck
     # via scikit-learn
     # via scipy
     # via streamlit
+opencv-python==4.9.0.80
+    # via ragapp
 packaging==23.2
     # via altair
+    # via pytesseract
     # via streamlit
 pandas==2.2.2
     # via altair
     # via streamlit
+pdf2image==1.17.0
+    # via ragapp
 pillow==10.3.0
+    # via pdf2image
+    # via pyocr
+    # via pytesseract
+    # via ragapp
     # via streamlit
 proto-plus==1.23.0
     # via google-ai-generativelanguage
     # via google-api-core
+    # via google-cloud-vision
 protobuf==4.25.3
     # via google-ai-generativelanguage
     # via google-api-core
+    # via google-cloud-vision
     # via google-generativeai
     # via googleapis-common-protos
     # via grpcio-status
@@ -118,8 +136,12 @@ pydeck==0.9.1
     # via streamlit
 pygments==2.18.0
     # via rich
+pyocr==0.8.5
+    # via ragapp
 pyparsing==3.1.2
     # via httplib2
+pytesseract==0.3.10
+    # via ragapp
 python-dateutil==2.9.0.post0
     # via pandas
 pytz==2024.1
