@@ -168,3 +168,4 @@ config.py
 
 # Remove test.py
 test.py
+.vscode/settings.json
