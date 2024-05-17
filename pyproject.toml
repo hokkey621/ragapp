@@ -16,6 +16,7 @@ dependencies = [
     "google-cloud>=0.34.0",
     "google-cloud-vision>=3.7.2",
     "opencv-python>=4.9.0.80",
+    "watchdog>=4.0.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"

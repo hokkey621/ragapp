@@ -30,7 +30,7 @@ def embed_query(query):
         title="単一文字列の埋め込み",
     )['embedding']
 
-def get_top_n_sentences(query_embedding, embeddings, sentences_list, n=3):
+def get_top_n_sentences(query_embedding, embeddings, sentences_list, n=5):
     embeddings_array = np.array(embeddings)
     query_emb = np.array(query_embedding).reshape(1, -1)
     cos_similarities = cosine_similarity(query_emb, embeddings_array)
@@ -74,6 +74,7 @@ def main():
                 query_embedding = embed_query(user_input)
                 top_sentences = get_top_n_sentences(query_embedding, embeddings, sentences_list)
                 reference_info = " ".join(top_sentences)
+                print(reference_info)
                 response_text = generate_response(user_input, reference_info)
                 st.markdown(response_text)
         st.session_state.messages.append({"role": "assistant", "content": response_text})
